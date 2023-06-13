@@ -1,0 +1,654 @@
+/* =============
+ table of contents
+===============
+
+0. global styles
+1. ul class .flex
+      1.1 sub HTML + css + JavaScript
+      1.2 sub sub of CSS
+
+
+2. main & footer
+3. header of mobile
+ 
+*/
+
+/* ===============
+   0. global style
+================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+
+  font-family: "Caveat", cursive;
+  font-family: "Edu TAS Beginner", cursive;
+  font-family: "Poppins", sans-serif;
+
+  text-decoration: none;
+  list-style: none;
+
+  letter-spacing: 1px;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ===============
+   1.  ul class .flex
+================ */
+
+.hide-when-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.main-list {
+  padding: 20px;
+  font-size: 19px;
+  position: relative;
+}
+
+.main-link {
+  padding: 8px 25px;
+  color: #333333;
+}
+
+.main-link:hover {
+  color: #ffb22c;
+  transform: scale(1.2);
+  border-radius: 5px;
+  transition: 0.4s all;
+}
+
+/* =======================================
+   1.1 sub HTML + css + JavaScript
+======================================== */
+
+.sub-ul {
+  display: none;
+
+  position: absolute;
+  top: 69px;
+  left: -15px;
+  border-top: 1px solid cyan;
+
+  background-color: #1b1b1b;
+
+  border-radius: 5px;
+  padding: 5px;
+
+  width: 155px;
+}
+
+.sub-of-js {
+  left: 10px;
+}
+
+.sub-ul li {
+  padding: 8px 0;
+  font-size: 17px;
+  border-bottom: 1px solid black;
+}
+
+.sub-ul li a:hover {
+  color: cyan;
+  font-weight: bold;
+}
+
+.main-list:hover .sub-ul {
+  display: block;
+}
+
+/* =======================================
+   1.2 sub sub of CSS
+======================================== */
+
+.sub-sub-ul {
+  position: absolute;
+  top: 80px;
+  left: 153px;
+
+  border-top: 1px solid cyan;
+
+  background-color: #1b1b1b;
+
+  border-radius: 5px;
+  padding: 5px;
+
+  width: 150px;
+
+  display: none;
+}
+
+.mini-projects:hover .sub-sub-ul {
+  display: block;
+}
+
+/* ==================
+    2. main & footer
+===================== */
+main {
+  color: #1b1b1b;
+
+  height: calc(100vh - 128.64px);
+
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==================
+    3. header of mobile
+===================== */
+.show-when-mobile {
+  display: none;
+}
+.slide {
+  display: flex;
+  align-items: center;
+
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home-name {
+  font-weight: 600;
+  color: #171717;
+}
+.logo {
+  display: flex;
+
+  align-self: center;
+  padding: 0 70px;
+  font-size: 25px;
+  color: #ffb22c;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.logo:hover {
+  transform: scale(1.2);
+}
+.container {
+  padding: 0px 70px;
+  display: flex;
+  position: absolute;
+  top: 150px;
+}
+
+.text h1 {
+  font-family: "Caveat", cursive !important;
+  font-family: "Edu TAS Beginner" !important;
+  font-family: "Poppins", sans-serif !important;
+  color: #333333;
+  line-height: 80px;
+  font-weight: 500;
+}
+.text h2 {
+  font-family: "Caveat", cursive !important;
+  font-family: "Edu TAS Beginner" !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 80px;
+}
+.text p {
+  font-family: "Caveat", cursive !important;
+  font-family: "Edu TAS Beginner" !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 22px;
+  height: 28px;
+  color: #333333;
+  font-weight: 300;
+  line-height: 80px;
+}
+.buttons {
+  margin-top: 95px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.signupbtn {
+  left: -10px;
+  position: absolute;
+  margin: 10px;
+  padding: 15px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(
+    45deg,
+    #fdbe50 0%,
+    #ffb22c 51%,
+    #fda000 100%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.signupbtn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  padding: 17px 52px;
+}
+
+.signupbtn:active {
+  transform: scale(0.95);
+}
+
+.signinbtn {
+  position: absolute;
+  margin: 10px;
+  padding: 15px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #333333;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  border: 2px solid #333333;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  left: 200px;
+}
+.signinbtn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #ffb22c;
+  border: 2px solid #ffb22c;
+  text-decoration: none;
+  padding: 17px 52px;
+}
+
+.signinbtn:active {
+  transform: scale(0.95);
+}
+.buttons hr {
+  height: 3px;
+  background-color: #ffb22c;
+  border: none;
+  width: 70px;
+  position: relative;
+  left: 400px;
+}
+.cardParent {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.card {
+  width: 400px;
+  height: 270px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px;
+  padding: 20px 30px;
+  cursor: pointer;
+}
+.card1 {
+  animation: cardMovie 4s 10;
+}
+
+.card1:hover {
+  transform: translateY(-15px);
+  transition: 0.4s all;
+}
+.card2 {
+  transition: 0.4s all;
+}
+.card2:hover {
+  transform: translateY(-15px);
+  transition: 0.4s all;
+}
+.card3 {
+  transition: 0.4s all;
+}
+.card3:hover {
+  transform: translateY(-15px);
+  transition: 0.4s all;
+}
+
+@keyframes cardMovie {
+  0% {
+    translatey: (-300px);
+  }
+  100% {
+    translatey: (800px);
+  }
+}
+.stars {
+  font-size: 30px;
+  color: #ffb22c;
+  height: 35px;
+  margin-bottom: 20px;
+}
+.views {
+  font-size: 35px;
+  font-weight: 200;
+  height: 70px;
+}
+.recipeTitle {
+  font-size: 30px;
+  height: 40px;
+  font-weight: 400;
+}
+.imageplate {
+  height: 700px;
+  width: 700px;
+}
+.image {
+  position: absolute;
+  right: 95px;
+  z-index: 50;
+  top: 0px;
+  animation: mymovie 0.7s 1;
+  cursor: pointer;
+}
+@keyframes mymovie {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ----------------
+      sign up 
+---------------- */
+.backphoto {
+}
+.mainSignup {
+  background: url(../src/img/MLA_French.png);
+  height: 100vh;
+  width: 100vw;
+  background: rgb(187 187 187);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signContainer {
+  width: 1000px;
+  height: 700px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #ffeac6;
+  border-color: #ffb22c;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ffd283;
+}
+
+.form-select {
+  background-color: #212529;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 15px;
+  height: 45px;
+}
+
+.form-select:focus {
+  box-shadow: none;
+  border: 1px solid #fff;
+}
+
+.signup-button {
+  height: 48px;
+}
+.img-signup {
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px 0 0 10px;
+  max-height: 700px;
+}
+.formContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  border-left: .5px solid rgb(225, 225, 225);
+}
+.formContainer form {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  width: 70%;
+  height: 70%;
+}
+form label {
+  margin: 0;
+  font-size: 14px;
+}
+form .signupUser,.signupEmail,.signupPass
+{
+  width: 100%;
+  margin: 10px 0;
+}
+.signupPass{
+  width: 100%;
+  margin: 10px 0;
+}
+form p {
+  font-size: 13px;
+  margin-bottom: 40px;
+  color: darkgray;
+}
+form a {
+  font-size: 13px;
+  text-decoration: underline;
+  color: #326c92;
+  transition: all .3s;
+}
+form a:hover {
+
+  color: #fcb740;
+}
+.signupPassword{
+  margin-bottom: 0 !important;
+}
+.signupforgetPassword{
+
+  width: 100%;
+  margin: -7px !important;}
+  .back-to-main {
+    margin-top: 20px;
+    margin-bottom: 75px;
+    font-size: 15px;
+}
+.sign-button {
+  color: white;
+  margin-top: 80px;
+  background-color: #ffa509;
+  transition: all .3s;
+  cursor: pointer;
+}
+.sign-button:hover{
+  background-color: #fcb740;
+  color: #c87f00;
+  border: 1px solid rgb(168, 168, 168);
+}
+.sign-button:focus{
+  border: 1px solid #fff;
+}
+h1{
+  font-family: 'Courier New', Courier, monospace;
+}
+.errorlog{
+  color: red;
+  margin: 6px;
+}
+
+/* -----------
+main page 
+----------- */
+
+.userNameStates{
+  display: flex;
+}
+.userNameStates h1 {
+  font-size: 20px;
+  margin: 10px;
+  display: flex;
+  align-self: center;
+}
+.userNameStates button {
+
+  margin: 10px;
+  padding: 15px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #333333;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  border: 2px solid #333333;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+.userNameStates button:hover {
+
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  padding: 17px 52px;
+}
+.mainPageContainer{
+  background-color: #212529;
+border-radius: 5px;
+  height: 100vh;
+  background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    flex-flow: row;
+    display: flex;
+    justify-content: space-between;
+
+}
+.mainPageContainer1{
+padding: 0 70px;
+}
+.section1, .section2 ,.section3{
+  margin: 10px;
+  padding: 30px 25px;
+  border: #171717 solid 1px;
+}
+.profileData{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #ffb22c;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.profileData img
+{
+  margin-right: 10px;
+}
+.userData{
+display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.section1 h2{
+  font-size: 25px;
+ 
+}
+.lineRecipe{
+  border-bottom: #ffb22c solid 3px;
+width: 50px;
+ 
+}
+.uploded{
+  margin-top: 20px;
+  color:#ffb22c ;
+}
+.uplodedRecipeBoxes{
+  display: flex;
+}
+.uplodedRecipeBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #326c92;
+ 
+  width: 100%;
+}
+.uplodedRecipeBox img {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 2px;
+}
+.userPic{
+  background-size: contain;
+ background: cov;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
